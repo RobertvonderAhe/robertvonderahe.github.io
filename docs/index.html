@@ -17,16 +17,24 @@
   <script>
     window.$docsify = {
       homepage: 'startseite.md',
-      name: 'Schweden Freizeit',
+      name: 'Roberts Seite',
       repo: '',
       loadSidebar: "sidebar.md",
       subMaxLevel: 2,
       auto2top: true,
-      relativePath: true
+      relativePath: true,
+      routerMode: 'history',
+      pagination: {
+        previousText: '上一章节',
+        nextText: '下一章节',
+      },
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//unpkg.com/docsify-slides/dist/docsify-slides.min.js"></script>
+
 
 
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
