@@ -1,3 +1,3 @@
 * [**Startseite**](/startseite)
 * [**Toolchain**](/pages/toolchain) 
-* [**Privates**](/private_navigator)
+[//]: <> "* [**Privates**](/private_navigator)"
