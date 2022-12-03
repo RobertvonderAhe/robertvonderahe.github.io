@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Schweden Freizeit</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="app">Bitte warten...</div>
+  <script>
+    window.$docsify = {
+      homepage: 'startseite.md',
+      name: 'Schweden Freizeit',
+      repo: '',
+      loadSidebar: "sidebar.md",
+      subMaxLevel: 2,
+      auto2top: true,
+      relativePath: true
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
+
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-go.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.6.0/sha1.min.js"></script>
+  <script type="text/javascript">
+    "use strict"
+    
+    function login_private(secret) {
+      let passwordInput = document.querySelector('#password-input')
+
+      var hash = sha1(secret)
+      var url = "/privates_" + hash + "/startseite"
+      var request = new XMLHttpRequest()
+      request.open('GET', url + ".md", true)
+      request.onload = function () {
+        if (request.status >= 200 && request.status < 400) {
+          window.location = "/#" + url
+        } else {
+          //parent.location.hash = hash
+          document.querySelector('#alert').style.display = 'block'
+          passwordInput.setAttribute('placeholder', 'Falsches Passwort')
+          passwordInput.value = ''
+        }
+      }
+      request.onerror = function () {
+        //parent.location.hash = hash
+        document.querySelector('#alert').style.display = 'block'
+        password.setAttribute('placeholder', 'Falsches Passwort')
+        password.value = ''
+      }
+      request.send()
+    }
+    document.onkeydown = function (e) {
+      e = e || window.event
+      if (!window.location.toString().includes('private_navigator')) return;
+      if (e.keyCode == 13) {
+        login_private(document.querySelector('#password-input').value)
+      }
+    }
+  </script>
+</body>
+
+</html>

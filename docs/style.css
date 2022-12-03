@@ -1,0 +1,20 @@
+table td + td { 
+    border-left: 2px solid black !important;
+}
+table tr td:nth-child(1) {
+    width: 20% !important;
+}
+table tr td:nth-child(2) {
+    width: 80% !important;
+}
+table th { 
+   display: none;
+}
+table { 
+   border: 2px solid black !important;
+}
+
+article.markdown-section .download-area {
+    display: block !important;
+    border: none !important;
+}
