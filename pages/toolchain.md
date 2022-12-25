@@ -88,9 +88,10 @@ Standalone Beispiele:
 
 | Ökosystem | github/gitlab | Atlassian | JetBrains | IBM | Polarion | Redmine | Windows |
 |---|---|---|---|---|---|---|---|
-| Projekt | - | - | - | - | Polarion | Redmine | 
+| Projekt | - | - | YouTrack | - | Polarion | Redmine | 
 | Anforderung | - | *PlugIn* | - | Doors | Polarion | - |
 | Ticket | github/gitlab | JIRA | - | CRM | Polarion | Redmine | Azure |
-| Review | github/gitlab | Bitbucket | Team | - | Polarion | - | Azure |
-| Build | github/gitlab | Bamboo | - | - | - | - | Azure |
+| Review | github/gitlab | Bitbucket | Upsource | - | Polarion | - | Azure |
+| Build | github/gitlab | Bamboo | TeamCity | - | - | - | Azure |
+| Test | - | - | Qodana | - | - | - | Azure |
 | Wiki | github/gitlab | Confluence | - | - | Polarion | Redmine | Azure |
